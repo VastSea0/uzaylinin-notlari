@@ -1,6 +1,6 @@
 ---
 title: 'Merhaba Dünya'
-date: '23 Temmuz 2024 - 21:26 civarı'
+date: '2024-07-23T21:26:00'
 ---
 
 # Merhaba Dünya!

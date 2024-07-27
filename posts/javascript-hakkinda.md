@@ -1,6 +1,6 @@
 ---
 title: "Javascript hakkında"
-date: '24 Temmuz 2024 : 00:00'
+date: '2024-07-24T00:00:00'
 ---
 
 Bir web geliştirici olarak öğrenmemin gerekliği olduğu en önemli şey Javascripttir. Bu nedenle bu dili iyice öğrenip sıfırdan yazılım geliştirmem gerekiyor ve kendimce sanırım bir serüven başlatacağım ve Javascript üzerine yazılar yazacağım.

@@ -15,18 +15,28 @@ export default function Blog() {
     return {
       slug: fileName.replace('.md', ''),
       title: data.title,
-      date: data.date
+      date: new Date(data.date) // Tarihleri Date nesnesine dönüştür
     }
   })
 
+  // Tarihleri en yeni olanı en üstte olacak şekilde sıralama
+  const sortedPosts = posts.sort((a, b) => b.date - a.date)
+
   return (
     <ul className="space-y-4">
-      {posts.map((post) => (
+      {sortedPosts.map((post) => (
         <li key={post.slug} className="bg-gray-700 shadow-md rounded-lg overflow-hidden">
           <Link href={`/blog/${post.slug}`}>
             <div className="px-4 py-5 hover:bg-gray-600 transition duration-150 ease-in-out">
               <h3 className="text-lg leading-6 font-medium text-purple-300">
-                {post.title} | {post.date}
+                {post.title} | {post.date.toLocaleDateString('tr-TR', {
+                  day: '2-digit',
+                  month: 'long',
+                  year: 'numeric'
+                })} {post.date.toLocaleTimeString('tr-TR', {
+                  hour: '2-digit',
+                  minute: '2-digit'
+                })}
               </h3>
             </div>
           </Link>
