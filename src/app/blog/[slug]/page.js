@@ -4,7 +4,13 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
+import rehypeReact from 'rehype-react'
 import Link from 'next/link'
+import Card from '../../comps/card'
+
+const components = {
+  Card: Card,
+};
 
 export default function BlogPost({ params }) {
   const { slug } = params
@@ -19,7 +25,7 @@ export default function BlogPost({ params }) {
           <ul className="flex space-x-4">
             <li><Link href="/" className="text-purple-300 hover:text-purple-100">Anasayfa</Link></li>
             <li><Link href="/blog/helo" className="text-purple-300 hover:text-purple-100">Hakkında</Link></li>
-          <li><Link href=" https://github.com/VastSea0" className="text-purple-300 hover:text-purple-100">Github</Link></li>
+            <li><Link href="https://github.com/VastSea0" className="text-purple-300 hover:text-purple-100">Github</Link></li>
           </ul>
         </nav>
       </header>
@@ -29,6 +35,7 @@ export default function BlogPost({ params }) {
           <h2 className="text-4xl font-semibold mb-2">Ben <span className="text-purple-400">Egehan</span></h2>
           <p className="text-2xl text-purple-200">Yazılım geliştricisi</p>
         </div>
+      
         <div className="bg-gray-800 shadow-lg rounded-lg overflow-hidden border border-purple-500">
           <div className="p-6">
             <h2 className="text-2xl font-semibold text-purple-300 mb-4">{data.title} | {data.date}</h2>
@@ -36,7 +43,7 @@ export default function BlogPost({ params }) {
               <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="prose prose-lg prose-invert prose-purple max-w-none">
                   <ReactMarkdown
-                    rehypePlugins={[rehypeRaw]}
+                    rehypePlugins={[rehypeRaw, [rehypeReact, { components }]]}
                     remarkPlugins={[remarkGfm]}
                     className="text-gray-200"
                   >
