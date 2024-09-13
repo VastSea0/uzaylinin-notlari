@@ -32,7 +32,7 @@ export default function BlogPost({ params }) {
       <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-4 text-purple-300">Herkese Merhaba 👋</h1>
-          <h2 className="text-4xl font-semibold mb-2">Ben <span className="text-purple-400">Egehan</span></h2>
+          <h2 className="text-4xl font-semibold mb-2">Ben <span className="text-purple-400">Egehan 🦀</span></h2>
           <p className="text-2xl text-purple-200">Yazılım geliştricisi</p>
         </div>
       

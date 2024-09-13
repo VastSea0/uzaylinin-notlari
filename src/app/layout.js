@@ -11,6 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="tr">
+    <head>
+    <link rel="icon" href="https://doc.rust-lang.org/stable/book/img/ferris/not_desired_behavior.svg" />
+    </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
