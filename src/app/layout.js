@@ -13,6 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="tr">
     <head>
     <link rel="icon" href="https://doc.rust-lang.org/stable/book/img/ferris/not_desired_behavior.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Old+Turkic&display=swap" rel="stylesheet" />
     </head>
       <body className={inter.className}>{children}</body>
     </html>
