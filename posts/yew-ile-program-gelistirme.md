@@ -147,3 +147,5 @@ tamam şimdi ise
 ```
 
 Uyanınca devam edicem .d 🦀
+
+Devam ediyorum yazı muhtelemen şurada olacak [Yazı](https://uzaylinin-notlari.netlify.app/blog/yew-ile-programgelistirme-iki)
