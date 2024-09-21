@@ -1,6 +1,6 @@
 ---
 title: 'Yew: Basit önyüz fonskiyonları 🦀'
-date: '2024-09-21T02:37:00'
+date: '2024-09-22T02:37:00'
 ---
 
 ### 1. Temel Yapı: Komponent Tanımlama
