@@ -1,34 +1,61 @@
 import Link from 'next/link'
+import { Github, Mail, Instagram } from 'lucide-react'
 import Blog from './blog/page'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-       <header className="bg-gray-800 border-b border-purple-500">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <ul className="flex space-x-4">
-          <li><Link href="/" className="text-purple-300 hover:text-purple-100">Anasayfa</Link></li>
-          <li><Link href="/blog/helo" className="text-purple-300 hover:text-purple-100">Hakkında</Link></li>
-          <li><Link href=" https://github.com/VastSea0" className="text-purple-300 hover:text-purple-100">Github</Link></li>
-        </ul>
-      </nav>
-    </header>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+      <header className="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-lg border-b border-purple-500 sticky top-0 z-10">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <ul className="flex items-center justify-between">
+            <li className="font-bold text-xl text-purple-300">Egehan</li>
+            <div className="flex space-x-6">
+              <li><Link href="/" className="text-purple-300 hover:text-purple-100 transition duration-300">Anasayfa</Link></li>
+              <li><Link href="/blog/helo" className="text-purple-300 hover:text-purple-100 transition duration-300">Hakkında</Link></li>
+              <li><Link href="https://github.com/VastSea0" className="text-purple-300 hover:text-purple-100 transition duration-300">Github</Link></li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+
       <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 text-purple-300">Herkese Merhaba 👋</h1>
-          <h2 className="text-4xl font-semibold mb-2">Ben <span className="text-purple-400">Egehan</span></h2>
-          <p className="text-2xl text-purple-200">Yazılım geliştricisi</p>
+        <div className="text-center mb-16">
+         
+          <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            İnternet'in özgür vadilerine hoş geldiniz!
+          </h1>
+          <h2 className="text-4xl font-semibold mb-4">
+            Ben <span className="text-purple-400">Egehan</span>
+          </h2>
+          <p className="text-2xl text-purple-200 mb-6 bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 "> Yazılım | Felsefe | Tarih | Müzik</p>
+          
+          
+          <p className="text-lg text-gray-400">Bir yazılım geliştiricisi olarak, bu blogda yazılım, felsefe, mitoloji ve tarih üzerine içerikler paylaşıyorum.</p>
+          <p className="text-lg text-gray-400">Ayrıca, benimle iletişime geçmek için kendinizi özgür hissedin; aşağıdaki sosyal medya hesaplarımı kullanabilirsiniz.</p>
+          <div className="flex justify-center space-x-4">
+            <a href="https://github.com/VastSea0" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300">
+              <Github size={24} />
+            </a>
+            <a href="mailto:vastseaoffical0@outlook.com" className="text-gray-300 hover:text-white transition duration-300">
+              <Mail size={24} />
+            </a>
+            <a href="https://instagram.com/crusttaceans" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300">
+              <Instagram size={24} />
+            </a>
+          </div>
         </div>
-        <div className="bg-gray-800 shadow-lg rounded-lg overflow-hidden border border-purple-500">
+
+        <div className="bg-gray-800 shadow-xl rounded-lg overflow-hidden border border-purple-500 transition duration-300 hover:shadow-2xl hover:border-pink-500">
           <div className="p-6">
-            <h2 className="text-2xl font-semibold text-purple-300 mb-4">Blog Yazıları</h2>
+            <h3 className="text-2xl font-semibold mb-4 text-purple-300">Son Blog Yazıları</h3>
             <Blog />
           </div>
         </div>
       </main>
-      <footer className="bg-gray-800 mt-12 py-6 border-t border-purple-500">
+
+      <footer className="bg-gray-800 bg-opacity-50 mt-12 py-6 border-t border-purple-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-purple-300">&copy; 2024 Egehan. Tüm hakları saklıdır. </p>
+          <p className="text-purple-300">&copy; {new Date().getFullYear()} Egehan. Tüm hakları saklıdır.</p>
         </div>
       </footer>
     </div>
