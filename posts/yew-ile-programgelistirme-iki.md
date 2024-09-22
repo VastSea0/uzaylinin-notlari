@@ -1,6 +1,6 @@
 ---
 title: 'Rust programlama: Yew ile önyüz geliştirirken geçirdiğim süreç gün 2'
-date: '2024-09-22T01:42:00'
+date: '2024-09-22T05:36:00'
 ---
 
 <div className="bg-gray-800 shadow-lg rounded-lg overflow-hidden border border-purple-500">
