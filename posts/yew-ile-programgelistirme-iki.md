@@ -126,3 +126,125 @@ Böyle duruyor şu an yapımız tamamen hazır görünüyor
 Konsol çıktısı şu an böyle göründüğüne göre önyüze başlayabiliriz...
 
 Ön yüze başlamadan önce ön yüz için bir yazı daha yazacağım bu yazı aslında yine bana kaynak olacak bunun nedeni yew çerçevesinde arayüzde inputtan bilgi almak veya vermek göstermek için kullanacağımız işlerimi not alacağım o nedenle bu yazıyı şu anda part 1 olarak commitleyip daha sonra o yazıyı yazacağım ve buraya tekrar döneceğim...
+
+Tamam şimdi bütün her şeyi yazdım ve bitti
+
+```Rust
+mod data_manager;
+mod components;
+
+use log::log;
+use yew::prelude::*;
+use components::list::list_tuples;
+use components::view::view_tuple;
+use data_manager::{add_tuple_to_vector, initialize_vector, delete_tuple_from_vector};
+
+struct NotePad {
+    vector: Vec<(u32, String, String)>,
+    index: u32
+}
+
+#[derive(Debug, PartialEq)]
+pub enum Msg {
+    AddOne(u32, String, String),
+    RemoveOne(u32),
+    ListVector,
+    ViewTuple(u32),
+}
+
+impl Component for NotePad {
+    type Message = Msg;
+    type Properties = ();
+
+    fn create(_ctx: &Context<Self>) -> Self {
+
+        let vector = initialize_vector();
+        let index:u32 = 1;
+        Self {
+            vector,
+            index,
+        }
+    }
+
+    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
+        match msg {
+
+            Msg::AddOne(id, title, content) => {
+                self.index += 1;
+                add_tuple_to_vector(&mut self.vector, id, title, content);
+
+                true
+            }
+
+            Msg::RemoveOne(id) => {
+
+                delete_tuple_from_vector(&mut self.vector, id);
+                if self.index == 0 {
+                    self.index = 1
+                } else {
+                    self.index -= 1;
+                }
+                true
+            }
+
+            Msg::ListVector => {
+                list_tuples(&self.vector);
+
+                false
+            }
+
+            Msg::ViewTuple(id) => {
+                view_tuple(&self.vector, id as usize ); //Fix: Type mismatch [E0308]expected `usize`, but found `i32`
+                log::info!("helo");
+
+                false
+            }
+        }
+    }
+
+    fn view(&self, _ctx: &Context<Self>) -> Html {
+        let vector_display = self.vector.iter().map(|(id, title, content)| {
+            html! { <p>{ format!("ID: {}, Title: {}, Content: {}", id, title, content) }</p> }
+        });
+
+        let index = self.index.clone();
+        html! {
+            <div>
+                <button onclick={_ctx.link().callback(move |_| Msg::AddOne(index, "First".to_string(), "Element".to_string()))}>
+                    { "Add  Tuple" }
+                </button>
+
+                <button onclick={_ctx.link().callback(move |_| Msg::RemoveOne(index))}>
+                    { "Remove Tuple" }
+                </button>
+                <button onclick={_ctx.link().callback(|_| Msg::ListVector)}>
+                    { "List Tuples" }
+                </button>
+                <button onclick={_ctx.link().callback(|_| Msg::ViewTuple(1))}>
+                    { "View First Tuple" }
+                </button>
+
+               <p >  { for vector_display }  </p>
+                <p>  {index} </p>
+            </div>
+        }
+    }
+}
+
+fn main() {
+    yew::Renderer::<NotePad>::new().render();
+}
+
+```
+
+`trunk serve` ile projemi başlattım ve şu anda başarılı şekilde yerel ağımda çalıştı
+
+![resim](https://github.com/user-attachments/assets/90343bca-3f64-4c86-8765-6b8bd1be61b4)
+
+ 
+Ve şimdi butonlara basıp sonucu göreceğim
+
+![resim](https://github.com/user-attachments/assets/604a96e9-0621-4478-9b2d-b1cc7cbd4dba)
+
+
+Ancak şu an aklıma takılan nokta bu projenin aynısını JavaScript ile daha kolay yapabilirim bu nedenle biraz araştırma yapıp spesifik alana yönelmeyi düşüneceğim.
