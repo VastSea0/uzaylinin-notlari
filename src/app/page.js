@@ -30,9 +30,10 @@ export default function Home() {
           <p className="text-2xl text-purple-200 mb-6 bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 "> Yazılım | Felsefe | Tarih | Müzik</p>
           
           
-          <p className="text-lg text-gray-400">Bir yazılım geliştiricisi olarak, bu blogda yazılım, felsefe, mitoloji ve tarih üzerine içerikler paylaşıyorum.</p>
-          <p className="text-lg text-gray-400">Ayrıca, benimle iletişime geçmek için kendinizi özgür hissedin; aşağıdaki sosyal medya hesaplarımı kullanabilirsiniz.</p>
-          <div className="flex justify-center space-x-4">
+          <p className="text-lg text-gray-400">Özgür değilsin henüz, hala özgürlüğü <code> a r i y o r s u n </code>. </p>
+          <p className="text-lg text-gray-400">Uykusuz ve aşırı uyanık kılmış arayışın seni</p>
+    
+    <div className="flex justify-center space-x-4">
             <a href="https://github.com/VastSea0" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition duration-300">
               <Github size={24} />
             </a>
