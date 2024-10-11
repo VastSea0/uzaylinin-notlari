@@ -1,3 +1,5 @@
+
+
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -8,6 +10,7 @@ import rehypeReact from 'rehype-react'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, Github } from 'lucide-react'
 import Card from '../../comps/card'
+import Comments from '../../comps/Comments'
 
 const components = {
   Card: Card,
@@ -60,6 +63,8 @@ export default function BlogPost({ params }) {
             </div>
           </div>
         </article>
+
+        <Comments postId={slug} />
       </main>
 
       <footer className="bg-gray-800 bg-opacity-50 mt-12 py-6 border-t border-purple-500">
