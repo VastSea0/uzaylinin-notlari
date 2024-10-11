@@ -23,11 +23,14 @@ export default function Home() {
         <div className="text-center mb-16">
          
           <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-            İnternet'in özgür vadilerine hoş geldiniz!
+            En kutsal düşüncem kelimler ile beden verdiğim o düşüncelerdir!
           </h1>
-          <h2 className="text-4xl font-semibold mb-4">
-            Ben <span className="text-purple-400">Egehan</span>
+          <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            Kelimelerin tanrı olduğu topraklara hoş geldiniz!
           </h2>
+          <h3 className="text-3xl font-semibold mb-4">
+            Ben <span className="text-purple-400">Egehan</span>
+          </h3>
           <p className="text-2xl text-purple-200 mb-6 bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 "> Yazılım | Felsefe | Tarih | Müzik</p>
           
           
