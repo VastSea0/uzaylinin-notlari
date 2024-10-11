@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Github, Mail, Instagram } from 'lucide-react'
 import Blog from './blog/page'
+import Thinks from './thinks/page'
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
           <p className="text-2xl text-purple-200 mb-6 bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 "> Yazılım | Felsefe | Tarih | Müzik</p>
           
           
-          <p className="text-lg text-gray-400">Özgür değilsin henüz, hala özgürlüğü <code> a r i y o r s u n </code>. </p>
+          <p className="text-lg text-gray-400">Özgür değilsin henüz, hala özgürlüğü <code className="text-purple-400" > a r ı y o r s u n </code>. </p>
           <p className="text-lg text-gray-400">Uykusuz ve aşırı uyanık kılmış arayışın seni</p>
     
     <div className="flex justify-center space-x-4">
@@ -50,6 +51,17 @@ export default function Home() {
           <div className="p-6">
             <h3 className="text-2xl font-semibold mb-4 text-purple-300">Son Blog Yazıları</h3>
             <Blog />
+            
+          </div>
+        </div>
+        <br>
+
+        </br>
+        <div className="bg-gray-800 shadow-xl rounded-lg overflow-hidden border border-purple-500 transition duration-300 hover:shadow-2xl hover:border-pink-500">
+          <div className="p-6">
+            <h3 className="text-2xl font-semibold mb-4 text-purple-300">Son Düşünce Yazıları</h3>
+            <Thinks />
+            
           </div>
         </div>
       </main>
