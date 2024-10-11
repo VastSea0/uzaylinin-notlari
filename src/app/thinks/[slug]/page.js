@@ -18,8 +18,20 @@ const components = {
 
 export default function ThinksPost({ params }) {
   const { slug } = params
-  const filePath = path.join(process.cwd(), 'thinks', `${slug}.md`)
-  const fileContent = fs.readFileSync(filePath, 'utf8')
+  const filePath = path.join(process.cwd(), 'thinks', `${slug}.md`);
+ 
+
+  let fileContent;
+  try {
+    fileContent = fs.readFileSync(filePath, 'utf8');
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.error(`File not found: ${filePath}`);
+      fileContent = 'Dosya bulunamadı.';
+    } else {
+      throw err;
+    }
+  }
   const { data, content } = matter(fileContent)
 
   return (
