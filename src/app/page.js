@@ -23,10 +23,10 @@ export default function Home() {
         <div className="text-center mb-16">
          
           <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-            En kutsal düşüncem kelimler ile beden verdiğim o düşüncelerdir!
+            Beni tam olarak anlamanız için
           </h1>
           <h2 className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-            Kelimelerin tanrı olduğu topraklara hoş geldiniz!
+            Geçtiğim yollardan sizde geçin..
           </h2>
           <h3 className="text-3xl font-semibold mb-4">
             Ben <span className="text-purple-400">Egehan</span>
