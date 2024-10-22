@@ -1,6 +1,6 @@
 ---
 title: 'Ustam geldi, sırtıma vurdu, unut dedi romanları'
-date: '2024-07-23T21:26:00'
+date: '2024-10-22T21:55:00'
 ---
 
 > Ustam geldi, sırtıma vurdu, unut dedi romanları...
