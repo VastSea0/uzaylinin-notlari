@@ -1,18 +1,18 @@
-{
-  "title": "Yazı Başlığı",
-  "content": "## Başlık\nMerhaba, bu bir Markdown yazısıdır!"
-}
-{
-  "title": "Yazı Başlığı 2",
-  "content": "## Başlık\nMerhaba, bu bir Markdown yazısıdır!"
-}
-
-{
-  "title": "Yazı Başlığı 3",
-  "content": "## Başlık\nMerhaba, bu bir Markdown yazısıdır!"
-}
-
-{
-  "title": "Yazı Başlığı 4",
-  "content": "## Başlık\nMerhaba, bu bir Markdown yazısıdır!"
-}
+[
+  {
+    "title": "Yazı Başlığı",
+    "content": "## Başlık\nMerhaba, bu bir Markdown yazısıdır!"
+  },
+  {
+    "title": "Yazı Başlığı 2",
+    "content": "## Başlık\nMerhaba, bu bir Markdown yazısıdır!"
+  },
+  {
+    "title": "Yazı Başlığı 3",
+    "content": "## Başlık\nMerhaba, bu bir Markdown yazısıdır!"
+  },
+  {
+    "title": "Yazı Başlığı 4",
+    "content": "## Başlık\nMerhaba, bu bir Markdown yazısıdır!"
+  }
+]
