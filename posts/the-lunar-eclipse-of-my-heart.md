@@ -1,6 +1,7 @@
 ---
 title: 'A Lunar Eclipse of my Heart.'
 date: '2025-01-02T02:00:00'
+view: false
 ---
 # A Lunar Eclipse of my Heart
 Do you remember those days? That first day? And me? You know, I remember it like yesterday, without even remembering yesterday. Don't mind my fault, I thought wrongly of you that morning in my drowsiness. Yet I always thought wrong. Don't mind my fault. Let me be like time in this letter; let me start from the past towards the future — towards our non-existent future.
