@@ -15,11 +15,18 @@ export default function Blog() {
       slug: fileName.replace('.md', ''),
       title: data.title,
       date: new Date(data.date),
-      excerpt: data.excerpt || ''
+      excerpt: data.excerpt || '',
+      view: data.view
     }
   })
 
-  const sortedPosts = posts.sort((a, b) => b.date - a.date)
+  // Filter posts based on view property
+  const visiblePosts = posts.filter(post => {
+    // Show post if view is true or if view property doesn't exist
+    return post.view === true || post.view === undefined
+  })
+
+  const sortedPosts = visiblePosts.sort((a, b) => b.date - a.date)
 
   return (
     <div className="container mx-auto px-4 py-8">
