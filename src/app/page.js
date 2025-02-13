@@ -31,7 +31,7 @@ export default function Home() {
           <h3 className="text-3xl font-semibold mb-4">
             Ben <span className="text-purple-400">Egehan</span>
           </h3>
-          <p className="text-2xl text-purple-200 mb-6 bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 "> Yazılım | Felsefe | Tarih | Müzik</p>
+          <p className="text-2xl text-purple-200 mb-6 bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 "> Yazılım | Felsefe | Müzik</p>
           
           
           <p className="text-lg text-gray-400">Özgür değilsin henüz, hala özgürlüğü <code className="text-purple-400" > a r ı y o r s u n </code>. </p>
